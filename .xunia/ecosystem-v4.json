@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "ecosystem_version": "4.0.0",
+  "repo": "sonoxo/xuniaxmr",
+  "classification": "research-satellite",
+  "category": "privacy-and-cryptography-upstream-derived",
+  "control_root": "sonoxo/gpt-doug-llm",
+  "domain_registry": "sonoxo/xuniadao",
+  "boundary": "This repository is an upstream-derived privacy/cryptography research and build reference. It is not a canonical XUNIA control plane, wallet authority, custody service, trading system or automatic transaction plane. Upstream attribution and licensing remain authoritative."
+}
