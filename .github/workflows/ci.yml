@@ -23,7 +23,7 @@ jobs:
         with:
           submodules: recursive
       - name: Install configure dependencies
-        run: sudo apt-get update && sudo apt-get install -y cmake ninja-build pkg-config qtbase5-dev qtdeclarative5-dev libqt5svg5-dev libssl-dev libunbound-dev libzmq3-dev libsodium-dev libhidapi-dev libusb-1.0-0-dev libprotobuf-dev protobuf-compiler libgcrypt20-dev libboost-all-dev
+        run: sudo apt-get update && sudo apt-get install -y cmake ninja-build pkg-config qtbase5-dev qtdeclarative5-dev qttools5-dev-tools libqt5svg5-dev libssl-dev libunbound-dev libzmq3-dev libsodium-dev libhidapi-dev libusb-1.0-0-dev libprotobuf-dev protobuf-compiler libgcrypt20-dev libboost-all-dev
       - name: Configure
         run: cmake -S . -B build/ci -G Ninja -D CMAKE_BUILD_TYPE=Release -D QML_TESTS=OFF -D WITH_SCANNER=OFF -D MANUAL_SUBMODULES=OFF
       - name: Build
