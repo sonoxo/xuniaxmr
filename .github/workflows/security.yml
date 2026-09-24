@@ -29,7 +29,8 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if git grep -nIE '(walletSeed|privateKey|spendKey|viewKey|mnemonic|clientSecret|accessToken)[[:space:]]*[:=][[:space:]]*["'''][^"''']+' -- . ':(exclude)ontology/xuniaxmr.ontology.json' ':(exclude)scripts/validate_ontology.py'; then
+          pattern="(walletSeed|privateKey|spendKey|viewKey|mnemonic|clientSecret|accessToken)[[:space:]]*[:=][[:space:]]*[\"'][^\"']+"
+          if git grep -nIE "$pattern" -- . ':(exclude)ontology/xuniaxmr.ontology.json' ':(exclude)scripts/validate_ontology.py'; then
             echo "::error::Potential credential or wallet secret committed"
             exit 1
           fi
